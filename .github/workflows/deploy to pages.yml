@@ -22,10 +22,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: GitHub Pages
+      -
+        name: GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.Pages }}
+          GITHUB_TOKEN: ${{ secrets.PAGES }}
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           # Build directory to deploy
           build_dir: build
+          target_branch: gh-pages

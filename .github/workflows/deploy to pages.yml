@@ -24,9 +24,9 @@ jobs:
       
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.5.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.Pages }}
         with:
           # Build directory to deploy
           build_dir: build
           branch: gh-pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.Pages }}

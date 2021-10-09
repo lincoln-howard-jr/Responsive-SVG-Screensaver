@@ -23,10 +23,10 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.Pages }}
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           # Build directory to deploy
           build_dir: build
           branch: gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.Pages }}
